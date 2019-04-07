@@ -121,6 +121,15 @@ h6 {
 	color: #46e6b0;
 }
 
+.fa-align-justify {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.fa-align-justify:hover {
+	color: #b81c31;
+}
+
 /*_____________SECOND-HOME_____________*/
 
 .content {
@@ -276,9 +285,10 @@ h6 {
     line-height: 1.25em;
 }
 
-.red-letter {
+.plus__title::first-letter {
 	color: #b81c31;
 }
+
 
 /*_____________FIFTH-HOME_____________*/
 
@@ -943,10 +953,12 @@ h6 {
 /* ________992px-1200px .col-lg-________ */
 @media screen and (max-width: 1200px) {
 /* ________HOME________ */
+	.logo-img {
+		width: 100%;
+	}
 	.pages {
 		padding: 24px 0 26px;
 	}
-
 	.article__left {
     width: 50%;
 	}
@@ -965,6 +977,9 @@ h6 {
 /* ________768px-992px .col-md-________ */
 @media screen and (max-width: 992px) {
 /* ________HOME________ */
+	.phone-btn-top {
+		font-size: 10px;
+	}
 	.col-lg-4:last-child .questions {
 		margin-top: 30px;
 	}
@@ -1094,6 +1109,9 @@ h6 {
 /* ________320px-576px .col________ */
 @media screen and (max-width: 576px) {
 /* ________HOME________ */
+	.phone-btn-top {
+		padding: 5px 0;
+	}
 	.article__left {
 		width: 100%;
 		margin-bottom: 30px;
@@ -1154,14 +1172,3 @@ h6 {
 	}
 
 }
-
-
-
-
-
-
-
-
-/* ________HOME________ */
-/* ________ABOUT________ */
-
