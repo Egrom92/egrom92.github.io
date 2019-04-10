@@ -20,10 +20,23 @@
 	<!--_____________BOOTSTRAP-CSS_____________-->
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--_____________arcticModal____________-->
+	<link rel="stylesheet" href="css/simple.css">	
+	<link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
 	<!--_____________MAIN-CSS_____________-->
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<!--_____________PRELOADER_____________-->
+	<div id="page-preloader">
+		<div class="cssload-loader">
+			<div class="cssload-flipper">
+				<div class="cssload-front"></div>
+				<div class="cssload-back"></div>
+			</div>
+		</div>
+	</div>
+
 <!--_____________FIRST-SCREEN_____________-->
 <header class="header-pages" id="header-pages">
 	<div class="cap">
@@ -63,15 +76,15 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-6 col-lg-2 d-flex justify-content-sm-end">
-					<button class="phone-btn btn phone-btn-top">
+				<div class="col-6 col-lg-2 d-flex justify-content-end">
+					<button class="phone-btn btn phone-btn-top phone-modal">
 						<i class="fa fa-phone"></i>
 						<span>
 							Заказать звонок
 						</span>
 					</button>
 					<button class="menu-open d-lg-none ">
-						<i class="fa fa-align-justify"></i>
+						<i class="fa fa-bars"></i>
 					</button>
 				</div>
 			</div>
@@ -123,10 +136,11 @@
 	</div>
 </header>
 <!--_____________SECOND-SCREEN_____________-->
-<section class="map" id="map">
+<section class="map-one" id="map-one">
 	<div class="container">
 		<div class="row">
 			<div class="col d-flex justify-content-end">
+				<div id="map" style="width: 600px; height: 400px"></div>
 				<div class="map-contact">
 					<div class="map-contact__head d-flex align-items-center justify-content-between">
 						<h5 class="map-contact__title">
@@ -193,7 +207,9 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="nav-branches">
 					<h6 class="nav-branches__title">
-						О компании
+						<a href="about.html" class="nav-branches__title-link">
+							О компании
+						</a>
 					</h6>
 					<ul class="nav-branches__list">
 						<li class="nav-branches__edit">
@@ -227,7 +243,9 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="nav-branches">
 					<h6 class="nav-branches__title">
-						Пресс – центр
+						<a href="#" class="nav-branches__title-link">
+							Пресс – центр
+						</a>
 					</h6>
 					<ul class="nav-branches__list">
 						<li class="nav-branches__edit">
@@ -256,7 +274,9 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="nav-branches">
 					<h6 class="nav-branches__title">
-						Услуги
+						<a href="services.html" class="nav-branches__title-link">
+							Услуги
+						</a>
 					</h6>
 					<ul class="nav-branches__list">
 						<li class="nav-branches__edit">
@@ -280,7 +300,9 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="nav-branches">
 					<h6 class="nav-branches__title">
-						Отрасли
+						<a href="#" class="nav-branches__title-link">
+							Отрасли
+						</a>
 					</h6>
 					<ul class="nav-branches__list">
 						<li class="nav-branches__edit">
@@ -319,7 +341,9 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="nav-branches">
 					<h6 class="nav-branches__title">
-						Образовательный центр
+						<a href="#" class="nav-branches__title-link">
+							Образовательный центр
+						</a>
 					</h6>
 					<ul class="nav-branches__list">
 						<li class="nav-branches__edit">
@@ -348,7 +372,9 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="nav-branches">
 					<h6 class="nav-branches__title">
-						Соц. предпринимательство
+						<a href="#" class="nav-branches__title-link">
+							Соц. предпринимательство
+						</a>
 					</h6>
 					<ul class="nav-branches__list">
 						<li class="nav-branches__edit">
@@ -439,7 +465,7 @@
 				</div>
 			</div>
 			<div class="col-lg-2 d-md-none d-lg-block text-centar mr-auto text-lg-right">
-				<button class="phone-btn btn phone-btn-footer">
+				<button class="phone-btn btn phone-btn-footer phone-modal">
 					<i class="fa fa-phone"></i>
 					Заказать звонок
 				</button>
@@ -447,5 +473,33 @@
 		</div>
 	</div>
 </div>
+<!--_____________ARCTICMODAL-CONTAINER_____________-->
+<div style="display: none;">
+    <div class="box-modal" id="exampleModal">
+		<div class="reg">
+			<div class="reg__wrap">
+				<h4 class="reg__title">
+					Заказать обратный звонок
+				</h4>
+				<p class="reg__text">
+					Заполните форму и мы свяжемся с вами как можно скорее. До скорой встречи
+				</p>
+				<form class="reg__form" action="#">
+					<input type="text" class="reg__input" required="" placeholder="Имя" name="name" aria-required="true">
+					<input type="email" class="reg__input" required="" placeholder="E-mail" name="email" aria-required="true">
+					<input type="tel" class="reg__input" required="" placeholder="Телефон" name="phone" aria-required="true">
+					<button class="phone-btn btn btn-send">
+						<i class="fa fa-phone"></i>
+						Заказать звонок
+					</button>
+				</form>
+			</div>
+		</div>	
+ 	</div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -20,6 +20,9 @@
 	<!--_____________BOOTSTRAP-CSS_____________-->
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--_____________arcticModal____________-->
+	<link rel="stylesheet" href="css/simple.css">	
+	<link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
 	<!--_____________MAIN-CSS_____________-->
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -33,7 +36,6 @@
 			</div>
 		</div>
 	</div>
-
 <!--_____________FIRST-SCREEN_____________-->
 <header class="header" id="header" data-type="background" data-speed="2">
 	<div class="cap">
@@ -73,15 +75,15 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-6 col-lg-2 d-flex justify-content-sm-end">
-					<button class="phone-btn btn phone-btn-top">
+				<div class="col-6 col-lg-2 d-flex justify-content-end">
+					<button class="phone-btn btn phone-btn-top phone-modal">
 						<i class="fa fa-phone"></i>
 						<span>
 							Заказать звонок
 						</span>
 					</button>
 					<button class="menu-open d-lg-none ">
-						<i class="fa fa-align-justify"></i>
+						<i class="fa fa-bars"></i>
 					</button>
 				</div>
 			</div>
@@ -166,11 +168,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col text-center">
-				<a href="#advantage" class="more-btn btn go-to">Подробнее</a>
-			</div>
-		</div>
+		<a href="#advantage" class="more-btn btn go-to">Подробнее</a>
 	</div>
 </section>
 <!--_____________FOURTH-SCREEN_____________-->
@@ -230,7 +228,7 @@
 					</h4>
 					<div class="article__entry d-flex flex-column flex-md-row justify-content-between">
 						<div class="article__left">
-							<p class="article__text article__text_first">
+							<p class="article__text">
 								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
 							</p>
 							<p class="article__text">
@@ -241,7 +239,7 @@
 							</a>
 						</div>
 						<div class="article__right">
-							<p class="article__text article__text_first">
+							<p class="article__text">
 								Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 
 							</p>
@@ -262,9 +260,11 @@
 						<div class="news__list d-flex align-items-lg-start">
 							<img src="img/truck.png" alt="Новость" class="news__img">
 							<div class="news__fragment">
-								<a href="#" class="news__text">
-									LAB Consulting запускает новое направление в своих услугах
-								</a>
+								<h6 class="news__fragment-title">
+									<a href="#" class="news__text">
+										LAB Consulting запускает новое направление в своих услугах
+									</a>
+								</h6>
 								<span class="news__time">
 									02.12.2015
 								</span>
@@ -273,9 +273,11 @@
 						<div class="news__list d-flex align-items-lg-start">
 							<img src="img/truck.png" alt="Новость" class="news__img">
 							<div class="news__fragment">
-								<a href="#" class="news__text">
-									LAB Consulting запускает новое направление в своих услугах
-								</a>
+								<h6 class="news__fragment-title">
+									<a href="#" class="news__text">
+										LAB Consulting запускает новое направление в своих услугах
+									</a>
+								</h6>
 								<span class="news__time">
 									02.12.2015
 								</span>
@@ -284,9 +286,11 @@
 						<div class="news__list d-flex align-items-lg-start">
 							<img src="img/truck.png" alt="Новость" class="news__img">
 							<div class="news__fragment">
-								<a href="#" class="news__text">
-									LAB Consulting запускает новое направление в своих услугах
-								</a>
+								<h6 class="news__fragment-title">
+									<a href="#" class="news__text">
+										LAB Consulting запускает новое направление в своих услугах
+									</a>
+								</h6>
 								<span class="news__time">
 									02.12.2015
 								</span>
@@ -504,11 +508,11 @@
 <!--_____________SEVENTH-SCREEN_____________-->
 <div class="footer" id="footer">
 	<div class="container">
-		<div class="row align-content-md-center text-center text-md-left">
+		<div class="row align-items-center text-center text-md-left">
 			<div class="col-md-4">
 				<img src="img/FooterLogo.png" alt="LAB Consulting" class="footer-logo">
 			</div>
-			<div class="col-md-4 col-lg-3 align-self-end">
+			<div class="col-md-4 col-lg-3">
 				<div class="decision">
 					<div class="decision__qestion">
 						<p>
@@ -534,7 +538,7 @@
 					</address>
 				</div>
 			</div>
-			<div class="col-md-4 col-lg-3 align-self-end">
+			<div class="col-md-4 col-lg-3">
 				<div class="firms">
 					<div class="firms__develop d-flex justify-content-center justify-content-md-start align-items-start">
 						<span class="firms__letter">
@@ -563,7 +567,7 @@
 				</div>
 			</div>
 			<div class="col-lg-2 d-md-none d-lg-block text-centar mr-auto text-lg-right">
-				<button class="phone-btn btn phone-btn-footer">
+				<button class="phone-btn btn phone-btn-footer phone-modal">
 					<i class="fa fa-phone"></i>
 					Заказать звонок
 				</button>
@@ -571,7 +575,32 @@
 		</div>
 	</div>
 </div>
+<!--_____________ARCTICMODAL-CONTAINER_____________-->
+<div style="display: none;">
+    <div class="box-modal" id="exampleModal">
+		<div class="reg">
+			<div class="reg__wrap">
+				<h4 class="reg__title">
+					Заказать обратный звонок
+				</h4>
+				<p class="reg__text">
+					Заполните форму и мы свяжемся с вами как можно скорее. До скорой встречи
+				</p>
+				<form class="reg__form" action="#">
+					<input type="text" class="reg__input" required="" placeholder="Имя" name="name" aria-required="true">
+					<input type="email" class="reg__input" required="" placeholder="E-mail" name="email" aria-required="true">
+					<input type="tel" class="reg__input" required="" placeholder="Телефон" name="phone" aria-required="true">
+					<button class="phone-btn btn btn-send">
+						<i class="fa fa-phone"></i>
+						Заказать звонок
+					</button>
+				</form>
+			</div>
+		</div>	
+ 	</div>
+</div>
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.arcticmodal-0.3.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

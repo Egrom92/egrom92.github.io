@@ -55,6 +55,9 @@ h6 {
 	font-size: 19px;
 }
 
+h1, h2, h3, h4, h5, h6, .navigation__link {
+	font-weight: 700;
+} 
 
 .btn {
 	border-bottom: 4px solid #149d6f;
@@ -215,7 +218,12 @@ h6 {
 	center top fixed no-repeat;
 }
 
+.fixed {
+	background: fixed;
+}
+
 .cap {
+	background-clip: padding-box;
 	border-top: 5px solid #58647a;
 	border-bottom: 3px solid 
 	rgba(88, 100, 122, 0.21);
@@ -249,7 +257,7 @@ h6 {
 	color: #46e6b0;
 }
 
-.fa-align-justify {
+.fa-bars {
 	font-size: 26px;
 }
 
@@ -344,10 +352,9 @@ h6 {
 /*_____________THIRD-HOME_____________*/
 
 .trust {
-	padding: 53px 0 77px;
+	padding: 53px 0 100px;
 	background-color: #f1f1f3;
-	box-shadow: inset 0px -99px 0px 0px 
-	rgba(255,255,255,1);
+	position: relative;
 }
 
 .questions {
@@ -381,16 +388,20 @@ h6 {
 }
 
 .more-btn {
-	margin-top: 74px;
+	position: absolute;
     width: 169px;
     padding: 10px 0;
     font-size: 16px;
+    bottom: -25px;
+    left: 0; 
+    right: 0;
+    margin: 0 auto;
 }
 
 /*_____________FOURTH-HOME_____________*/
 
 .advantage {
-	padding: 4px 0 78px;
+	padding: 102px 0 78px;
 }
 
 .plus {
@@ -488,9 +499,7 @@ h6 {
 
 .news__list {
 	max-width: 270px;
-	font-size: 12.5px;
-	font-weight: 700;
-	color: #dcdfe2;
+	color: #dcdee2;
 	padding-bottom: 10px;
 	margin-bottom: 17px;
 	position: relative;
@@ -516,9 +525,14 @@ h6 {
     line-height: 1.2em;
 }
 
+.news__fragment-title {
+	font-size: 12.5px;
+	font-weight: 700;
+}
+
 .news__text {
 	margin-bottom: 9px;
-	color: #fff;
+	color: #dcdee2;
 	display: block;
 }
 
@@ -545,6 +559,7 @@ h6 {
 
 .nav-branches__title {
 	margin-bottom: 16px;
+	font-weight: 700;
 }
 
 .nav-branches__title-link {
@@ -572,12 +587,16 @@ h6 {
 
 .footer {
 	background-color: #1f2531;
-	padding-bottom: 41px;
+	padding: 36px 0 41px;
 	border-bottom: 18px solid #58647a;
 	color: #aaabae;
 	font-size: 12px;
 	font-weight: 100;
 	line-height: 1.3em;
+}
+
+.footer-logo {
+	margin-top: -36px;
 }
 
 .decision__qestion {
@@ -632,10 +651,6 @@ h6 {
 	border-bottom: 1px solid;
 }
 
-.phone-btn-footer {
-    margin-top: 68px;
-}
-
 /*_____________SECOND-ABOUT_____________*/
 
 .pages {
@@ -653,17 +668,18 @@ h6 {
 	font-size: 15.6px;
 }
 
+.screen__lala:not(:last-child):after {
+	content: "\2192";
+	color: #91969e;
+	padding: 0 3px;
+}
+
 .screen__row-link {
 	color: #49556b;
 /*	border-bottom: 1px solid;*/
 	line-height: 1.2em;
 	text-decoration: underline;
-	text-decoration-color: #666f81;
-}
-
-.screen__arrow {
-	color: #91969e;
-	padding: 0 3px;
+	text-decoration-color: #747c8b;
 }
 
 .screen__open {
@@ -671,7 +687,7 @@ h6 {
 }
 
 .screen-nav__link {
-	padding: 11px 18px;
+	padding: 11px 16px;
 	border: 2px solid transparent;
 	font-weight: 700;
 	font-size: 16px;
@@ -681,22 +697,15 @@ h6 {
 }
 
 .screen-nav__link:hover {
-	color: #e2142f;
+	color: #b81c31;
 	border: 2px solid;
+	border-radius: 2px;
 }
 
 /*_____________THIRD-ABOUT_____________*/
 
 .advantages {
 	padding: 55px 0 39px;
-}
-
-.vantage:after {
-	content: '';
-	border-bottom: 1px solid #e5e6e8;
-	width: 100%;
-	display: inline-block;
-	margin-top: 56px;
 }
 
 .vantage-title {
@@ -713,21 +722,26 @@ h6 {
 }
 
 .answers {
+	border-top: 1px solid #e5e6e8;
 	margin-top: 56px;
 }
 
-.answers__point:after {
+.answers__container {
+	position: relative;
+	padding: 29px 0 29px;
+}
+
+.answers__container:after {
 	content: '';
 	border-bottom: 1px solid #e5e6e8;
-	width: 960px;
-	display: inline-block;
-    margin-left: -100px;
-    margin-top: 33px;
+	width: 100%;
+	max-width: 	960px;
+    position: absolute;
+    bottom: 0;
 }
 
 .answers__point {
-	max-width: 1069px;
-	margin-top: 29px;
+	width: 92%;
 }
 
 .answers__title {
@@ -739,16 +753,17 @@ h6 {
 .answers__text {
 	letter-spacing: 0.02em;
 	line-height: 1.2em;
+    color: #404048;
 }
 
-.answers-img {
-	width: 60px;
+.answers__img {
+	max-width: 60px;
+	width: 100%;
     border-radius: 100px;
     border: 2px solid #1d396b;
     display: inline-block;
     text-align: center;
     line-height: 56px;
-    margin-top: 32px;
 }
 
 /*_____________FOURTH-ABOUT_____________*/
@@ -800,22 +815,27 @@ h6 {
 
 /*_____________SECOND-ABOUT_____________*/
 
-.map {
-	background: #e9e5dc url(../img/Map.jpg)    
-	left -1409px top no-repeat;
-	padding: 47px 0 50px;
+.map-one {
 	color: #fff;
+	position: relative;
+}
+.yandex-map {
+	position: absolute;
+	height: 441px;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 
 .map-contact {
 	background-color: rgba(88, 100, 122, 0.75);
-	position: relative;
-	width: 470px;
+	max-width: 470px;
 	padding: 21px 39px 56px 28px;
 	border-radius: 4px;
+	position: relative;
 }
 
-.map-contact:after {
+.map-contact:before {
 	content: '';
 	width: 0;
 	height: 0;
@@ -858,12 +878,16 @@ h6 {
 }
 
 .map-contact__phone {
-	display: block;
+	display: inline-block;
 	margin-bottom: 2px;
 }
 
 .map-contact__phone:hover, .map-contact__e-mail:hover {
 	color: #b81c31;
+}
+
+.lala {
+	width: auto;
 }
 
 .map-contact__coordinate {
@@ -892,7 +916,7 @@ h6 {
 }
 
 .map-contact__short-info p:first-child {
-	padding-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 /*_____________SECOND-SERVICES_____________*/
@@ -901,6 +925,7 @@ h6 {
 .screen-nav__detail {
 	font-size: 13px;
 	font-weight: 300;
+	display: block;
 }
 
 /*_____________THIRD-SERVICES_____________*/
@@ -928,6 +953,7 @@ h6 {
 	margin-bottom: 18px;
 	line-height: 1.1em;
     letter-spacing: 0.03em;
+    font-weight: 700;
 }
 
 .worck p {
@@ -937,8 +963,8 @@ h6 {
 }
 
 .jurist-list {
-	width: 370px;
-	padding: 18px 0 17px 30px;
+	max-width: 370px;
+	padding: 18px 30px 17px 30px;
 	border: 1px solid #fff;
 	border-radius: 4px;
 	color: #fff;
@@ -965,13 +991,14 @@ h6 {
 }
 
 /*_____________FOURTH-SCREEN_____________*/
-
+.services-conten {
+	padding: 56px 0 55px;
+}
 .sub-content {
 	max-width: 775px;
 	font-size: 15px;
 	letter-spacing: 0.02em;
 	margin-bottom: 34px;
-	margin-top: 56px;
 }
 
 .sub-content__title {
@@ -986,7 +1013,7 @@ h6 {
 }
 
 .sub-content p:not(:last-child) {
-	padding-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .consultation {
@@ -995,20 +1022,21 @@ h6 {
 	width: 470px;
 	padding: 23px 32px 27px 32px;
 	border: 1px solid #e3e4e6;
-	margin-bottom: 55px;
 }
 
 .consultation__title {
 	font-size: 17px;
+	font-weight: 700;
 }
 
 .consultation__btn {
 	padding: 7px 0;
-	width: 153px;
+	max-width: 153px;
+	width: 100%;
     border: 2px solid;
     font-weight: 700;
     font-size: 15px;
-    color: #e2142f;
+    color: #b81c31;
     border-radius: 1px;
     display: inline-block;
     background-color: transparent;
@@ -1027,17 +1055,16 @@ h6 {
 }
 
 .consultation__text {
-	width: 224px;
+	max-width: 224px;
 	font-size: 12px;
 	color: #888d95;
 	line-height: 1.3em;
     letter-spacing: 0.02em;
 }
 
-.navigation {
-	max-width: 370px;
+.aside {
 	background-color: #f7f7f7;
-	padding-top: 50px;
+	padding: 50px 0 50px;
 	height: 100%;
 }
 
@@ -1051,7 +1078,7 @@ h6 {
 }
 
 .navigation__point {
-	padding: 11px 0 9px;
+	padding: 11px 83px 9px 56px;
 	border-bottom: 1px solid #dfdfe8;
 	letter-spacing: 0.03em;
 }
@@ -1060,8 +1087,6 @@ h6 {
 	color: #747487;
 	font-size: 15px;
 	display: block;
-	width: 224px;
-	margin-left: 56px;
 	position: relative;
 }
 
@@ -1077,6 +1102,181 @@ h6 {
     left: -28px;
 }
 
+.recall {
+	margin-top: 53px;
+}
+
+.slick-prev {
+    left: 12px;
+    color: #656e8d!important;
+    z-index: 1; 
+}
+
+.slick-next {
+    right: 12px;
+    color: #656e8d!important;
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+	display: none;
+}
+
+.slick-prev, .slick-next {
+	font-size: 25px;
+	color: #404048;
+	top: 22%;
+	height: 50px;
+	width: 50px;
+	transition: all 0.5s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+	color: #656e8d;
+}
+
+.slick-prev:hover {
+	left: 6px;
+}
+
+.slick-next:hover {
+	right: 6px;
+}
+
+.slick-prev:active {
+	left: 12px;
+}
+
+.slick-next:active {
+	right: 12px;
+}
+.slick-dots {
+	bottom: -50px;
+}
+
+.slick-dots li button:before {
+    width: 11px;
+    height: 11px;
+    content: '';
+    opacity: 1;
+    background-color: #bdc5d6;
+}
+
+.slick-dots li.slick-active button:before {
+    background-color: #8b9ab7;
+}
+
+.recall__title {
+	padding-left: 26px;
+	font-size: 18px;
+	color: #969ca9;
+	font-weight: 700;
+	padding-bottom: 42px;
+}
+
+.recall__review {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	max-width: 285px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.recall__photo {
+	overflow: hidden;
+	width: 140px;
+	height: 140px;
+	border-radius: 100px;
+	margin: 0 auto;
+	border: 5px solid #656e8d;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.recall__name {
+	font-size: 15px;
+	color: #747487;
+	margin: 15px 0 12px;
+}
+
+.recall__comment {
+	color: #404048;
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+
+.recall__facefook-icon {
+	color: #2c60a0;
+}
+
+/*_____________ARCTICMODAL-CONTAINER_____________*/
+
+.arcticmodal-container {
+	background: rgba(19, 23, 49, 0.93);
+}
+
+.box-modal {
+	background: none;
+	box-shadow: none;
+	padding-top: 30px;
+	max-width: 500px;
+	width: 100%;
+}
+
+.reg {
+	margin: 0 auto;
+	max-width: 412px;
+	border-radius: 5px;
+	background: #fff;
+	width: 100%;	
+}
+
+.reg__wrap {
+	padding: 35px 31px;
+    box-shadow: 0 13px 98px rgba(0, 0, 0, .24);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.reg__title {
+	font-size: 21px;
+	font-weight: 700;
+	border-radius: 5px;
+	color: #081d42;
+}
+
+.reg__text {
+	line-height: 1.5em;
+	margin-top: 20px;
+
+}
+
+.reg__form {
+	margin-top: 16px;
+}
+
+.reg__input {
+	font-size: 13px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 13px 0;
+    border: none;
+    border-bottom: 1px solid #bababa;
+}
+
+.reg__input:hover {
+	color: red;
+	border-bottom: 1px solid #000;
+}
+
+.btn-send {
+	max-width: 309px;
+	margin-top: 20px;
+	
+}
+
 /*_____________MEDIA QUERIES_____________*/
 
 /* ________992px-1200px .col-lg-________ */
@@ -1085,8 +1285,8 @@ h6 {
 	.logo-img {
 		width: 100%;
 	}
-	.pages {
-		padding: 24px 0 26px;
+	.menu__link {
+		font-size: 15px;
 	}
 	.article__left {
 		width: 50%;
@@ -1094,18 +1294,23 @@ h6 {
 	.article__right {
 		width: 47%;
 	}
+	.footer-logo {
+		margin-top: 0;
+	}
 /* ________ABOUT________ */
 	.vantage-text {
 		width: 48%;
 	}
 /* ________SERVICES________ */
-	
+	.navigation__point {
+		padding-right: 26px;
+	}
 
 /* ________CONTACTS________ */
-	.map {
-		background: #fff url(../img/Map.jpg) left -1839px top no-repeat;
+
+	.position-map-contact {
+		right: 10px;
 	}
-}
 /* ________768px-992px .col-md-________ */
 @media screen and (max-width: 992px) {
 /* ________HOME________ */
@@ -1138,17 +1343,12 @@ h6 {
 	.screen__title {
 		text-align: center;
 	}
-	.screen__sequence {
-		justify-content: center;
-	}
 	.screen-nav {
 		justify-content: center;
 		margin-top: 30px;
 	}
-	.answers__point:after {
-		max-width: 690px;
-		width: 100%;
-   		margin-left: -118px;
+	.answers__point {
+		width: 85%;
 	}
 	.menu-collapse {
 		order: 1;
@@ -1180,35 +1380,32 @@ h6 {
 	}
 /* ________SERVICES________ */
 	.worck {
-		width: 100%;
+		max-width: none;
 	}
 	.consultation {
 		width: 100%;
 	}
 	.navigation {
-		max-width: 100%;
-	}
-	.navigation__link {
-		width: auto;
-	}
-	.navigation__nav {
 		margin-bottom: 30px;
 	}
 /* ________CONTACTS________ */
-	.map-contact:after {
+	.map-contact:before {
 		content: unset;
 	}
 	.map-contact {
-		width: 100%;
+		max-width: none;
 	}
 	.map-contact__connect {
-		width: 45%;
+		width: 215px;
 	}
 	.map-contact__short-info {
 		width: 55%;
 	}
-	.map-contact {
-		margin-top: 424px;
+	.position-map-contact {
+		position: relative;
+		top: 0;
+		right: 0;
+		padding: 22px 20px 25px;
 	}
 }
 /* ________576px-768px .col-sm-________ */
@@ -1247,9 +1444,14 @@ h6 {
 		max-width: 100%;
 	}
 /* ________ABOUT________ */
-	.answers__point:after {
+	.answers__point {
 		width: 100%;
-   		margin-left: 0;
+	}
+	.answers__container {
+		padding-top: 41px;
+	}
+	.answers__img {
+		margin-bottom: 30px;
 	}
 	.vantage-text {
 		width: 100%;
@@ -1259,6 +1461,7 @@ h6 {
 	}
 	.screen-nav {
 		flex-direction: column;
+		text-align: center;
 	}
 /* ________SERVICES________ */	
 	.worck-pic {
@@ -1276,14 +1479,19 @@ h6 {
 	.phone-btn span {
 		display: none;
 	}
-	.fa-align-justify {
-		font-size: 26px;	
-	}
 	.phone-btn-top {
 		padding: 4px 0;
 	}
 	.phone-btn-top {
 		max-width: 112px;
+	}
+	.consultation {
+		background: none;
+	}
+	.consultation__contact {
+		display: flex;
+    	flex-direction: column;
+    	margin-bottom: 30px;
 	}
 }
 
@@ -1313,16 +1521,7 @@ h6 {
 	.screen-nav__point {
 		text-align: center;
 	}
-	.consultation__contact {
-		display: flex;
-    	flex-direction: column;
-    	margin-bottom: 30px;
-	}
 /* ________CONTACTS________ */
-	.map {
-    	background: #fff url(../img/Map.jpg) 
-    	left -2009px top no-repeat;
-	}
 	.map-contact__info {
 		flex-direction: column;
 	}
@@ -1330,7 +1529,7 @@ h6 {
 	    width: 100%;
 	}
 	.map-contact__connect {
-	    width: 100%;
+	    width: 200px;
 	    margin-bottom: 30px;
 	}
 	.map-contact__head {
@@ -1338,6 +1537,10 @@ h6 {
 	}
 	.map-contact__title {
 	    margin-bottom: 30px;
+	}
+/* ________MODAL________ */
+	.reg__title {
+		font-size: 20px;
 	}
 
 }
