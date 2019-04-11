@@ -99,17 +99,16 @@
 						<h1 class="screen__title">
 							Контакты
 						</h1>
-						<div class="screen__sequence d-flex">
-							<a href="index.html" class="screen__row-link">
-								Главная
-							</a>
-							<span class="screen__arrow">
-								&rarr;
-							</span>
-							<p class="screen__open">
+						<ul class="screen__sequence d-flex justify-content-center justify-content-lg-start">
+							<li class="screen__lala">
+								<a href="index.html" class="screen__row-link">
+									Главная
+								</a>
+							</li>
+							<li class="screen__open screen__lala">
 								Контактная информация
-							</p>
-						</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="col-lg-8 ml-auto">
@@ -138,9 +137,9 @@
 <!--_____________SECOND-SCREEN_____________-->
 <section class="map-one" id="map-one">
 	<div class="container">
+		<div id="yanndex-map" class="yandex-map"></div>
 		<div class="row">
 			<div class="col d-flex justify-content-end">
-				<div id="map" style="width: 600px; height: 400px"></div>
 				<div class="map-contact">
 					<div class="map-contact__head d-flex align-items-center justify-content-between">
 						<h5 class="map-contact__title">
@@ -498,8 +497,8 @@
  	</div>
 </div>
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

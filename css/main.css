@@ -16,6 +16,7 @@ ul, li, p, a, h1, h2, h3, h4, h5, body, address {
 
 a, .consultation__btn {
 	transition: all 0.5s ease;
+	outline: none;
 }
 
 li {
@@ -693,7 +694,7 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 	font-size: 16px;
 	color: #a1a6af;
 	border-radius: 1px;
-	display: inline-block;
+	display: block;
 }
 
 .screen-nav__link:hover {
@@ -821,31 +822,32 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 }
 .yandex-map {
 	position: absolute;
-	height: 441px;
+	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 5;
 }
-
 .map-contact {
 	background-color: rgba(88, 100, 122, 0.75);
 	max-width: 470px;
 	padding: 21px 39px 56px 28px;
 	border-radius: 4px;
 	position: relative;
+	margin: 44px 0 50px;
+	z-index: 6;
 }
 
 .map-contact:before {
 	content: '';
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 23px 23px 23px 0;
-	border-color: transparent 
-	rgba(88, 100, 122, 0.75) transparent transparent;
-	top: 15px;
-    left: -23px;
     position: absolute;
+    left: -17px;
+    top: 19px;
+    border: 17px solid transparent;
+    border-top: 17px solid rgba(88, 100, 122, 0.75);
+    border-left: 17px solid rgba(88, 100, 122, 0.75);
+    transform: rotate(-45deg);
+    border-radius: 5px 0 0 0;
 }
 
 .map-contact a {
@@ -908,7 +910,8 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 
 .map-contact__short-info {
 	line-height: 1em;
-	width: 180px;
+	max-width: 180px;
+	width: 100%;
 }
 
 .map-contact__short-info p {
@@ -1112,6 +1115,15 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
     z-index: 1; 
 }
 
+.slick-slide {
+	outline: none;
+}
+
+.slick-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 .slick-next {
     right: 12px;
     color: #656e8d!important;
@@ -1190,9 +1202,7 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 	border-radius: 100px;
 	margin: 0 auto;
 	border: 5px solid #656e8d;
-	display: flex;
-	justify-content: center;
-    align-items: center;
+	display: block;
 }
 
 .recall__name {
@@ -1209,6 +1219,13 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 
 .recall__facefook-icon {
 	color: #2c60a0;
+	width: 20px;
+    margin: 0 auto;
+    outline: none;
+}
+
+.slick-dots li button:before {
+	left: 5px;
 }
 
 /*_____________ARCTICMODAL-CONTAINER_____________*/
@@ -1394,12 +1411,18 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 	}
 	.map-contact {
 		max-width: none;
+		margin-top: 488px;
+		widows: 100%;
+	}
+	.yandex-map {
+		height: 443px;
 	}
 	.map-contact__connect {
 		width: 215px;
 	}
 	.map-contact__short-info {
-		width: 55%;
+		width: 65%;
+		max-width: none;
 	}
 	.position-map-contact {
 		position: relative;
@@ -1493,6 +1516,10 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
     	flex-direction: column;
     	margin-bottom: 30px;
 	}
+	.map-contact__head {
+		flex-direction: column;
+	}
+
 }
 
 
@@ -1531,9 +1558,6 @@ h1, h2, h3, h4, h5, h6, .navigation__link {
 	.map-contact__connect {
 	    width: 200px;
 	    margin-bottom: 30px;
-	}
-	.map-contact__head {
-		flex-direction: column;
 	}
 	.map-contact__title {
 	    margin-bottom: 30px;
